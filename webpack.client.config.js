@@ -1,10 +1,10 @@
 module.exports = {
   mode: "development",
   entry: "./src/client/index.js",
-  target: "node",
+  target: "web", // nodeだとrequeireとかサーバでか使えない記法になる
   output: {
-    path: __dirname + "/build",
-    filename: "[name].js",
+    path: __dirname + "/public",
+    filename: "client.js",
     publicPath: "/",
   },
   module: {

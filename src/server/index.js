@@ -5,6 +5,8 @@ import ReactDOMServer from "react-dom/server";
 
 const app = express();
 
+app.use(express.static("public"));
+
 app.get("/", (req, res) => {
   const html = ReactDOMServer.renderToString(
     App({

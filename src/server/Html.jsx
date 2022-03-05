@@ -13,7 +13,7 @@ const Html = ({ Children, title }) => {
         <div id="root">
           <Children />
         </div>
-        {/* <script defer src="./build/client.js" /> */}
+        <script defer src="/client.js" />
       </body>
     </html>
   );

@@ -1,12 +1,17 @@
 import express from "express";
-import bodyParser from "body-parser";
-import App from "./App";
+import Top from "../client/pages/Top";
+import App from "./Html";
 import ReactDOMServer from "react-dom/server";
 
 const app = express();
 
 app.get("/", (req, res) => {
-  const html = ReactDOMServer.renderToString(App());
+  const html = ReactDOMServer.renderToString(
+    App({
+      title: "Hello World",
+      Children: Top,
+    })
+  );
   res.send(html);
 });
 
